@@ -1,0 +1,46 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  gap: 1rem 1rem;
+  grid-template-areas:
+    "profile1"
+    "profile2"
+    "profile3"
+    "profile4"
+    "profile5";
+  margin: 1.5rem 1.5rem 0;
+}
+
+.violet {
+  grid-area: profile1;
+}
+
+.grayish-blue {
+  grid-area: profile2;
+}
+
+.white {
+  grid-area: profile3;
+}
+
+.blackish-blue {
+  grid-area: profile4;
+}
+
+.light-gray {
+  grid-area: profile5;
+}
+
+@media (min-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem 1rem;
+    grid-template-areas:
+      "profile1 profile1 profile2 profile5"
+      "profile3 profile4 profile4 profile5";
+    max-width: 1040px;
+    margin: 1.5rem 1.5rem  0;
+  }
+}

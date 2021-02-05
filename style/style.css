@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  background-color: #ecf2f8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  gap: 1rem 1rem;
+  grid-template-areas: "profile1" "profile2" "profile3" "profile4" "profile5";
+  margin: 1.5rem 1.5rem 0;
+}
+
+.violet {
+  grid-area: profile1;
+}
+
+.grayish-blue {
+  grid-area: profile2;
+}
+
+.white {
+  grid-area: profile3;
+}
+
+.blackish-blue {
+  grid-area: profile4;
+}
+
+.light-gray {
+  grid-area: profile5;
+}
+
+@media (min-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem 1rem;
+    grid-template-areas: "profile1 profile1 profile2 profile5" "profile3 profile4 profile4 profile5";
+    max-width: 1040px;
+    margin: 1.5rem 1.5rem 0;
+  }
+}
+.card {
+  padding: 1.75rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 15px 0px rgba(0, 0, 0, 0.25);
+}
+.card h1 {
+  font-size: 1.3rem;
+  margin-top: 1rem;
+  position: relative;
+  z-index: 2;
+}
+.card p {
+  margin-top: 1rem;
+  opacity: 0.7;
+  line-height: 1.25rem;
+  z-index: 1;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+}
+.profile img {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+.profile p {
+  margin-top: 0;
+  opacity: 0.5;
+  line-height: 1rem;
+}
+
+.color-a {
+  border: 2px solid #7541c8;
+}
+
+.color-b {
+  border: 2px solid #cfcfcf;
+}
+
+.violet {
+  background-color: #7541c8;
+  color: white;
+  position: relative;
+}
+.violet::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 1rem;
+  background-image: url("/images/bg-pattern-quotation.svg");
+  width: 104px;
+  height: 102px;
+  z-index: 1;
+}
+
+.grayish-blue {
+  background-color: #48556a;
+  color: white;
+}
+
+.white {
+  background-color: white;
+}
+
+.blackish-blue {
+  background-color: #19212e;
+  color: white;
+}
+
+.light-gray {
+  background-color: white;
+}
+
+@media (min-width: 768px) {
+  .violet::after {
+    right: 4rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
